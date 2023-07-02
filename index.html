@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="insurance.png">
+</head>
+
+<body>
+    <main class="bg"></main>
+    <div class="form-container">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            <button type="button" class="toggle-btn" onclick="getreport()">Get Report</button>
+        </div>
+        <form id="healthForm" class="hf" enctype="multipart/form-data">
+            <input type="text" id="input-fld" id="name" name="name" placeholder="Name" required>
+            <div class="age-weight">
+                <input type="text" id="age" name="age" placeholder="Age" required>
+                <input type="text" id="weight" name="weight" placeholder="Weight">
+            </div>
+            <input type="email" id="input-fld" id="email" name="email" placeholder="Email" required>
+            <div class="upload">
+                <label for="healthReport">Upload Health Report</label>
+                <input type="file" id="healthReport" name="healthReport" accept=".pdf">
+            </div>
+            <input type="submit" class="submit-btn" value="Submit">
+        </form>
+        <form id="fetchForm">
+            <input type="email" id="email" name="email" placeholder="Enter Email Address">
+            <input type="submit" class="submit-btn" value="Fetch Health Report">
+        </form>
+    </div>
+
+    <script>
+        var x = document.getElementById('healthForm');
+        var y = document.getElementById('fetchForm');
+        var z = document.getElementById('btn');
+        function register() {
+            x.style.left = "-600px";
+            y.style.left = "50px";
+            z.style.left = "130px";
+            z.style.width = "140px";
+            y.style.transition = "0.5s";
+        }
+        
+        function getreport() {
+            x.style.left = "50px";
+            y.style.left = "800px";
+            z.style.left = "0";
+            z.style.width = "128px";
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
